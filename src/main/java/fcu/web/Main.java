@@ -24,12 +24,12 @@ public class Main {
     try
     {
         System.out.print("Initiate ");
-    List<WebElement> elements = driver.findElements(By.cssSelector(".list .d-flex "));
-
-    for(WebElement element : elements)
+    List<WebElement> elements = driver.findElements(By.cssSelector(".frontpage-mycurricular"));
+//.frontpage-mycurricular
+        for(WebElement element : elements)
     {     System.out.print("Printin11");
-    WebElement CourseNameElement = element.findElement(By.cssSelector(" div .sr-only h6.d-inline.h5"));
-    WebElement TeacherNameElement = element.findElement(By.cssSelector(".teachers"));
+    WebElement CourseNameElement = element.findElement(By.cssSelector("h6"));
+    WebElement TeacherNameElement = element.findElement(By.cssSelector("span.teachers"));
 
         System.out.print("Printin22");
 //    System.out.print(CourseNameElement);
