@@ -23,13 +23,15 @@ public class Main {
 
     try
     {
-    List<WebElement> elements=driver.findElements(By.cssSelector(" .main .list"));
+        System.out.print("Initiate ");
+    List<WebElement> elements=driver.findElements(By.cssSelector(".list .d-flex "));
 
     for(WebElement element :elements)
     {
-    WebElement CourseNameElement=element.findElement(By.cssSelector("h6.d-inline.h5  "));
-    WebElement TeacherNameElement=element.findElement(By.cssSelector(" .teachers"));
-//
+    WebElement CourseNameElement=element.findElement(By.cssSelector(" div .sr-only h6.d-inline.h5"));
+    WebElement TeacherNameElement=element.findElement(By.cssSelector(".teachers"));
+
+    System.out.print("Printin");
 //    System.out.print(CourseNameElement);
     System.out.print(CourseNameElement.getText());
 //    System.out.print(TeacherNameElement);
