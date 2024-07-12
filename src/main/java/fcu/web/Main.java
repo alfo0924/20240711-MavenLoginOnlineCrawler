@@ -15,7 +15,7 @@ public class Main {
 
     driver.get("https://ilearn.fcu.edu.tw/login/index.php");
     driver.findElement(By.cssSelector(".usermenu span .login")).click();
-    driver.findElement(By.cssSelector("login-form-username input"));
+    driver.findElement(By.cssSelector("login-form-username input")).sendKeys();
     driver.findElement(By.cssSelector("login-form-password input"));
     driver.findElement(By.cssSelector(".login-form div .login-form-username "));
 
