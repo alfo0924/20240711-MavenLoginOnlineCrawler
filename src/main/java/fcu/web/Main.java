@@ -25,13 +25,13 @@ public class Main {
     {
     List<WebElement> elements = driver.findElements(By.cssSelector("#frontpage-mycurricular "));
     System.out.print("Initiate ");
-    Thread.sleep(14500);
+//    Thread.sleep(14500);
 
     for(WebElement element : elements)
     {
         System.out.print("Printin11");
-    WebElement CourseNameElement = element.findElement(By.cssSelector("h6"));
-    WebElement TeacherNameElement = element.findElement(By.cssSelector("div.teachers span"));
+    WebElement CourseNameElement = element.findElement(By.cssSelector("h6 "));
+    WebElement TeacherNameElement = element.findElement(By.cssSelector("div.teachers div "));
 
         System.out.print("Printin22");
 //    System.out.print(CourseNameElement);
