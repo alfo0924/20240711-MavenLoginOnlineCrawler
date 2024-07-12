@@ -13,11 +13,11 @@ public class Main {
     {
     WebDriver driver = new ChromeDriver();
 
-    driver.get("https://ilearn.fcu.edu.tw/login/index.php");
-    driver.findElement(By.cssSelector(".usermenu span .login")).click();
-    driver.findElement(By.cssSelector("login-form-username input")).sendKeys();
-    driver.findElement(By.cssSelector("login-form-password input"));
-    driver.findElement(By.cssSelector(".login-form div .login-form-username "));
+    driver.get("https://ilearn.fcu.edu.tw/");
+    driver.findElement(By.cssSelector(".usermenu span.login.pl-2")).click();
+    driver.findElement(By.cssSelector(".login-form-username input")).sendKeys("d1204433");
+    driver.findElement(By.cssSelector(".login-form-password input")).sendKeys("9987321fcuacC");
+    driver.findElement(By.cssSelector(".login-form-submit button.btn.btn-primary ")).click();
 
     WebElement selectElement=driver.findElement(By.cssSelector(""));
     Select select=new Select(selectElement);
