@@ -11,24 +11,29 @@ import java.sql.Driver;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) throws InterruptedException {
     WebDriver driver = new ChromeDriver();
 
     driver.get("https://ilearn.fcu.edu.tw/");
     driver.findElement(By.cssSelector(".usermenu span.login.pl-2")).click();
     driver.findElement(By.cssSelector(".login-form-username input")).sendKeys("d1204433");
     driver.findElement(By.cssSelector(".login-form-password input")).sendKeys("9987321fcuacC");
+        driver.findElement(By.cssSelector(".login-form-submit button.btn.btn-primary ")).click();
+
 
     try
     {
-    List<WebElement> elements=driver.findElements(By.cssSelector(""));
+    List<WebElement> elements=driver.findElements(By.cssSelector(" .main .list"));
 
     for(WebElement element :elements)
     {
-    WebElement CourseNameElement=element.findElement(By.cssSelector(""));
-    WebElement TeacherNameElement=element.findElement(By.cssSelector(""));
-
+    WebElement CourseNameElement=element.findElement(By.cssSelector("h6.d-inline.h5  "));
+    WebElement TeacherNameElement=element.findElement(By.cssSelector(" .teachers"));
+//
+//    System.out.print(CourseNameElement);
+    System.out.print(CourseNameElement.getText());
+//    System.out.print(TeacherNameElement);
+    System.out.print(TeacherNameElement.getText());
 
     }
 
@@ -39,11 +44,10 @@ public class Main {
     }
 
 
-    driver.findElement(By.cssSelector(".login-form-submit button.btn.btn-primary ")).click();
 
-    WebElement selectElement=driver.findElement(By.cssSelector(""));
-    Select select=new Select(selectElement);
-    select.selectByIndex(0);
+//    WebElement selectElement=driver.findElement(By.cssSelector(""));
+//    Select select=new Select(selectElement);
+//    select.selectByIndex(0);
 
 
         driver.quit();
