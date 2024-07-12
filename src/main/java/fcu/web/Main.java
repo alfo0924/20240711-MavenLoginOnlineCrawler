@@ -23,13 +23,15 @@ public class Main {
 
     try
     {
-        System.out.print("Initiate ");
-    List<WebElement> elements = driver.findElements(By.cssSelector(".frontpage-mycurricular"));
-//.frontpage-mycurricular
-        for(WebElement element : elements)
-    {     System.out.print("Printin11");
+    List<WebElement> elements = driver.findElements(By.cssSelector("#frontpage-mycurricular "));
+    System.out.print("Initiate ");
+    Thread.sleep(14500);
+
+    for(WebElement element : elements)
+    {
+        System.out.print("Printin11");
     WebElement CourseNameElement = element.findElement(By.cssSelector("h6"));
-    WebElement TeacherNameElement = element.findElement(By.cssSelector("span.teachers"));
+    WebElement TeacherNameElement = element.findElement(By.cssSelector("div.teachers span"));
 
         System.out.print("Printin22");
 //    System.out.print(CourseNameElement);
