@@ -24,18 +24,18 @@ public class Main {
     try
     {
         System.out.print("Initiate ");
-    List<WebElement> elements=driver.findElements(By.cssSelector(".list .d-flex "));
+    List<WebElement> elements = driver.findElements(By.cssSelector(".list .d-flex "));
 
-    for(WebElement element :elements)
-    {
-    WebElement CourseNameElement=element.findElement(By.cssSelector(" div .sr-only h6.d-inline.h5"));
-    WebElement TeacherNameElement=element.findElement(By.cssSelector(".teachers"));
+    for(WebElement element : elements)
+    {     System.out.print("Printin11");
+    WebElement CourseNameElement = element.findElement(By.cssSelector(" div .sr-only h6.d-inline.h5"));
+    WebElement TeacherNameElement = element.findElement(By.cssSelector(".teachers"));
 
-    System.out.print("Printin");
+        System.out.print("Printin22");
 //    System.out.print(CourseNameElement);
-    System.out.print(CourseNameElement.getText());
+        System.out.print(CourseNameElement.getText());
 //    System.out.print(TeacherNameElement);
-    System.out.print(TeacherNameElement.getText());
+        System.out.print(TeacherNameElement.getText());
 
     }
 
@@ -51,8 +51,10 @@ public class Main {
 //    Select select=new Select(selectElement);
 //    select.selectByIndex(0);
 
-
+        finally {
         driver.quit();
+    }
+
 
 
     }
