@@ -19,7 +19,6 @@ public class Main {
     driver.findElement(By.cssSelector(".login-form-username input")).sendKeys("");
     driver.findElement(By.cssSelector(".login-form-password input")).sendKeys("");
         driver.findElement(By.cssSelector(".login-form-submit button.btn.btn-primary ")).click();
-
         WebElement selectElement =driver.findElement(By.cssSelector("select[name='lmc-filtersemester']"));
         Select select =new Select(selectElement);
         select.selectByIndex(0);
