@@ -20,6 +20,10 @@ public class Main {
     driver.findElement(By.cssSelector(".login-form-password input")).sendKeys("9987321fcuacC");
         driver.findElement(By.cssSelector(".login-form-submit button.btn.btn-primary ")).click();
 
+        WebElement selectElement =driver.findElement(By.cssSelector("select[name='lmc-filtersemester']"));
+        Select select =new Select(selectElement);
+        select.selectByIndex(0);
+
 
     try
     {
@@ -30,25 +34,22 @@ public class Main {
     for(WebElement element : elements)
     {
         System.out.print("Printin11");
-    WebElement CourseNameElement = element.findElement(By.cssSelector("h6 "));
-    WebElement TeacherNameElement = element.findElement(By.cssSelector("div.teachers div "));
-
+    WebElement CourseNameElement = element.findElement(By.cssSelector("h6"));
+    WebElement TeacherNameElement = element.findElement(By.cssSelector("div"));
         System.out.print("Printin22");
 //    System.out.print(CourseNameElement);
-        System.out.print(CourseNameElement.getText());
+    System.out.print(CourseNameElement.getText());
 //    System.out.print(TeacherNameElement);
-        System.out.print(TeacherNameElement.getText());
+    System.out.print(TeacherNameElement.getText());
+    }
+
 
     }
 
-    }
     catch(NoSuchElementException e)
     {
     e.printStackTrace();
     }
-
-
-
 //    WebElement selectElement=driver.findElement(By.cssSelector(""));
 //    Select select=new Select(selectElement);
 //    select.selectByIndex(0);
