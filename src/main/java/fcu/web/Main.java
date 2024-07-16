@@ -18,14 +18,15 @@ public class Main {
     driver.findElement(By.cssSelector(".usermenu span.login.pl-2")).click();
     driver.findElement(By.cssSelector(".login-form-username input")).sendKeys("d1204433");
     driver.findElement(By.cssSelector(".login-form-password input")).sendKeys("9987321fcuacC");
-        driver.findElement(By.cssSelector(".login-form-submit button.btn.btn-primary ")).click();
+    driver.findElement(By.cssSelector(".login-form-submit button.btn.btn-primary ")).click();
+
         WebElement selectElement =driver.findElement(By.cssSelector("select[name='lmc-filtersemester']"));
         Select select =new Select(selectElement);
         select.selectByIndex(0);
 
     try
     {
-    List<WebElement> elements = driver.findElements(By.cssSelector("#frontpage-mycurricular "));
+    List<WebElement> elements = driver.findElements(By.cssSelector("#frontpage-mycurricular"));
     System.out.print("Initiate ");
 
     for(WebElement element : elements)
